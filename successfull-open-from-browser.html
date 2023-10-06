@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open app from browser</title>
+</head>
+
+<body>
+    <button onclick="run()">Take Note</button>
+
+</body>
+
+<script type="text/javascript">
+    function run() {
+        // WshShell = new ActiveXObject("WScript.shell");
+        // WshShell.Run("C:\Windows\System32\calc.exe", 1, false);
+
+        // var WshShell = new ActiveXObject("WScript.Shell");
+        // WshShell.Exec("C:/Windows/System32/calc.exe");
+
+        // window.location = "C:/Windows/System32/calc.exe";
+
+        document.getElementById('myP').style.display = 'none';
+        WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run("C:/Windows/System32/calc.exe", 1, false);
+    };
+</script>
+
+</html>

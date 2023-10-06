@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="index.java"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- attemp 1 -->
+    <!-- <a href="#" class="btn">click here</a> -->
+
+    <!-- attemp 2 -->
+    <!-- <asp:Button ID="button2" runat="server" Text="Go" OnClick="button2_Click" />click -->
+
+    <!-- attemp 3 -->
+    <!-- <a
+        onclick="window.open(document.URL, 'C:\Windows\System32\calc.exe', 'location=yes, height=570, width=520, scrollbars=yes, status=yes');">
+        Click here to open
+    </a> -->
+
+    <!-- attemp 4 -->
+    <HTA:APPLICATION ID="oMyApp" APPLICATIONNAME="Application Executer" BORDER="no" CAPTION="no" SHOWINTASKBAR="yes"
+        SINGLEINSTANCE="yes" SYSMENU="yes" SCROLL="no" WINDOWSTATE="normal">click here
+
+        <script type="text/javascript" language="javascript">
+            var oShell = new ActiveXObject("Shell.Application");
+            var commandtoRun = "C:\\Windows\\notepad.exe";
+            oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+        </script>
+
+        <script>
+            // attepm 1
+            var oShell = new ActiveXObject("Shell.Application");
+            var commandtoRun = "C:\\Windows\\notepad.exe";
+            oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+
+            // attepm 2
+            $(document).ready(function () {
+                $('.btn').click(function () {
+                    window.open('C:\Windows\System32\calc.exe');
+                });
+            });
+
+            // attepm 3
+            var oShell = new
+            ActiveXObject("Shell.Application");
+            var commandtoRun = "C:\Windows\System32\calc.exe ";
+            oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+
+            // attepm 4
+            var commandtoRun = "C:\Windows\System32\calc.exe";
+        </script>
+</body>
+
+</html>
+<!-- ('C:\Windows\System32\calc.exe') -->

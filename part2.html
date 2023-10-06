@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script language="JavaScript" type="text/javascript">
+        MyObject = new ActiveXObject("WScript.Shell")
+
+        function RunExe() {
+            MyObject.Run("file:///C:/Windows/System32/calc.exe");
+        }
+        0
+    </script>
+    <script language="javascript" type="text/javascript">
+        function runApp() 
+        { 
+        var shell = new ActiveXObject("WScript.shell"); 
+        shell.run("calc.exe", 1, True); 
+        location.href = "file:///C:/Windows/System32/calc.exe";
+        } 
+    </script>
+</head>
+<body>
+    <h1>Run a Program</h1>
+    This script launch the file any Exe File<p>
+        <button onclick="RunExe()">Run Exe File</button>
+</body>
+</html> 
+
